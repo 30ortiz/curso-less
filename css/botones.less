@@ -1,0 +1,64 @@
+// out: false
+.intro__btndarkmode {
+  width: 100px;
+  height: 50px;
+  padding: 5px;
+  margin: 0 auto;
+  position: relative;
+  position: absolute;
+  top: 50px;
+  left: 1100px;
+  right: 0;
+
+  .switch--button {
+    display: inline-block;
+  }
+
+  .switch--button .switch--button--checkbox {
+    display: none;
+  }
+
+  .switch--button .switch--button--label {
+    background-color: fade(@color-primario,50%) ;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 2rem;
+    display: inline-block;
+    position: relative;
+    box-shadow: inset 1px 1px;
+    box-shadow: inset .5px .5px 1px #3E3D3D,
+  			  .5px .5px 1px #3E3D3D ;
+  }
+
+  .switch--button .switch--button--label:before {
+    transition: .5s;
+    display: block;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: #DADADA;
+    text-align: center;
+    content: '';
+    border-radius: 50%;
+    box-shadow: 2px 0px 1px rgb(43, 42, 42),
+    
+  }
+
+
+
+  .switch--button .switch--button--checkbox:checked+.switch--button--label {
+    background-color: fade(@color-claro, 50%);
+  }
+
+  .switch--button .switch--button--checkbox:checked+.switch--button--label:before {
+    transform: translateX(2rem);
+    box-shadow: -2px 0px 2px gray;
+    content: '';
+
+  }
+
+
+
+
+
+}
